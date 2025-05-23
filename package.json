@@ -1,0 +1,57 @@
+{
+  "name": "hono-redis-kappe",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts --minify --treeshake --shims --clean",
+    "lint": "tsc"
+  },
+  "license": "MIT",
+  "description": "A Redis-powered rate-limiting middleware for Hono. It supports custom rate limits, IP or custom key tracking, and syncs hit counts across instances using Redis.",
+  "keywords": [
+    "hono",
+    "redis",
+    "rate-limiter",
+    "rate-limiting",
+    "middleware",
+    "api-throttling",
+    "redis-store",
+    "distributed-rate-limiting",
+    "request-limit",
+    "api-security"
+  ],
+  "homepage": "https://github.com/FranciscoMendes10866/hono-redis-kappe#README",
+  "bugs": {
+    "url": "https://github.com/FranciscoMendes10866/hono-redis-kappe/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranciscoMendes10866/hono-redis-kappe.git"
+  },
+  "author": {
+    "name": "Francisco Mendes",
+    "email": "fmendes_dev@protonmail.ch",
+    "url": "https://github.com/FranciscoMendes10866"
+  },
+  "dependencies": {
+    "rate-limiter-flexible": "^7.1.1"
+  },
+  "devDependencies": {
+    "hono": "^4.7.10",
+    "ioredis": "^5.6.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "hono": ">=4.7.10",
+    "ioredis": ">=5.6.1"
+  }
+}
